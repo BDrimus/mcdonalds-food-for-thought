@@ -16,11 +16,21 @@ def fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent):
     # entry_code_field.send_keys(entry_code)
 
     button_locator = (By.ID, "NextButton")
-
     button = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located(button_locator)
     )
+    button.click()
 
+    button_locator = (By.CSS_SELECTOR, "div.rbloption:nth-child(1) > span:nth-child(1) > label:nth-child(2)")
+    button = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located(button_locator)
+    )
+    button.click()
+
+    button_locator = (By.ID, "NextButton")
+    button = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located(button_locator)
+    )
     button.click()
 
 fill_out_survey("12345678901234567890123456789012", "01/01/2021", "12:00", "10.00")
