@@ -3,6 +3,15 @@ import tkinter as tk
 
 
 def display_gui():
+    
+    def get_receipt():
+        entry_code.set(entry1.get())
+        date_of_order.set(entry2.get())
+        time_of_order.set(entry3.get())
+        amount_spent.set(entry4.get())
+        root.destroy()
+        return entry_code, date_of_order, time_of_order, amount_spent
+
     ctk.set_appearance_mode("dark")
     ctk.set_default_color_theme("blue")
 
@@ -11,8 +20,13 @@ def display_gui():
 
     root.title("Receipt Reader")
 
+    entry_code = tk.StringVar()
+    date_of_order = tk.StringVar()
+    time_of_order = tk.StringVar()
+    amount_spent = tk.StringVar()
+
     frame = ctk.CTkFrame(master=root)
-    frame.grid(pady=50, padx=65)
+    frame.grid(pady=20, padx=65)
 
     frame.grid_rowconfigure(0, weight=1)
     frame.grid_columnconfigure(0, weight=1)
@@ -42,13 +56,9 @@ def display_gui():
     label4 = ctk.CTkLabel(master=frame, text="Amount Spent")
     label4.grid(row=4, column=1, sticky="w", pady=12, padx=12)
 
+    button = ctk.CTkButton(master=frame, text="Submit", command=get_receipt)
+    button.grid(row=5, column=0, columnspan=2, pady=12, padx=12)
+
     root.mainloop()
 
-def get_receipt():
-
-    entry_code = input("Please enter your entry code: ")
-    date_of_order = input("Please enter the date of your order (DD/MM/YYYY): ")
-    time_of_order = input("Please enter the time of your order (HH:MM): ")
-    amount_spent = input("Please enter the amount spent: ")
-
-display_gui()
+    return entry_code.get(), date_of_order.get(), time_of_order.get(), amount_spent.get()

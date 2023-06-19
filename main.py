@@ -15,6 +15,8 @@ def fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent):
     driver = webdriver.Firefox(service=Service(executable_path=geckodriver_path))
     driver.get("https://www.mcdfoodforthoughts.com")
 
+    print(entry_code, date_of_order, time_of_order, amount_spent)
+
     # Enter the entry code
     # entry_code_field = driver.find_element_by_id("CN1")
     # entry_code_field.send_keys(entry_code)
@@ -37,6 +39,6 @@ def fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent):
     )
     button.click()
 
-display_gui()
+entry_code, date_of_order, time_of_order, amount_spent = display_gui()
 
-#fill_out_survey("12345678901234567890123456789012", "01/01/2021", "12:00", "10.00")
+fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent)
