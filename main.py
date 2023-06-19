@@ -1,3 +1,5 @@
+import customtkinter as ctk
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.service import Service
@@ -5,6 +7,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+
+from gui import display_gui
 
 def fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent):
     geckodriver_path = "/geckodriver"
@@ -33,4 +37,6 @@ def fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent):
     )
     button.click()
 
-fill_out_survey("12345678901234567890123456789012", "01/01/2021", "12:00", "10.00")
+display_gui()
+
+#fill_out_survey("12345678901234567890123456789012", "01/01/2021", "12:00", "10.00")
