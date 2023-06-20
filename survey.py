@@ -56,25 +56,6 @@ def fill_out_survey(entry_code, amount_spent):
 
             if found:
                 break
-        
-    def rate_all_5():
-        # Count the number of rows in the table
-        rows = driver.find_elements(By.XPATH, "//table/tbody/tr")
-        num_rows = math.ceil(len(rows)//2)
-
-        for i in range(1, num_rows + 1):
-            button_locator_odd = (By.XPATH, f"//tr[contains(@class, 'InputRowOdd')][{i}]//input[@type='radio' and @value='5']")
-            if i < 3:
-                button_locator_even = (By.XPATH, f"//tr[contains(@class, 'InputRowEven')][{i}]//input[@type='radio' and @value='5']")
-
-            buttons_odd = find_elements(driver, button_locator_odd)
-            buttons_even = find_elements(driver, button_locator_even)
-
-            for button in buttons_odd:
-                driver.execute_script("arguments[0].checked = true;", button)
-
-            for button in buttons_even:
-                driver.execute_script("arguments[0].checked = true;", button)
     
     driver = webdriver.Firefox(service=Service(executable_path=geckodriver_path))
     driver.get("https://www.mcdfoodforthoughts.com")
