@@ -12,11 +12,11 @@ These instructions will help you set up and run the program on your local machin
 ## Installation
 1. Clone the repository to your local machine.
 ```
-git clone https://github.com/yourusername/receipt-reader.git
+git clone https://github.com/BDrimus/mcdonalds-food-for-thought
 ```
 2. Change the directory to the cloned repository.
 ```
-cd receipt-reader
+cd mcdonalds-food-for-thought
 ```
 3. Install the required Python packages.
 ```
