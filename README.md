@@ -36,7 +36,7 @@ email = "your@email.com"
 python main.py
 ```
 2. Enter the entry code and amount spent in the GUI that appears.
-3. The program will fill out the survey using the provided information and print the time taken in seconds.
+3. The program will fill out the survey using the provided information and you will receive the coupon code to your email in seconds.
 
 ## Contributing
 Please submit any bug reports, feature requests, or improvements as issues on the GitHub repository. You can also submit pull requests for any changes you'd like to see incorporated into the project.
