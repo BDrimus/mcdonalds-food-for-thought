@@ -7,6 +7,7 @@ These instructions will help you set up and run the program on your local machin
 
 ## Prerequisites
 Python 3.x installed on your system.
+Firefox web browser installed on your system.
 
 ## Installation
 1. Clone the repository to your local machine.
