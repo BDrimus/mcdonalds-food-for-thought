@@ -4,9 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-import math
 import random
-import time
 
 from config import geckodriver_path
 from config import email
@@ -21,12 +19,6 @@ def generate_random_name():
     return first_name, last_name
 
 def fill_out_survey(entry_code, amount_spent):
-
-    def find_elements(driver, locator, timeout=10):
-        try:
-            return WebDriverWait(driver, timeout).until(EC.presence_of_all_elements_located(locator))
-        except TimeoutException:
-            return []
         
     def click_until_id_not_present(driver, button_locator, target_id, timeout=10):
         while True:
