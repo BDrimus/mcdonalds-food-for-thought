@@ -8,7 +8,7 @@ def display_gui():
         entry_code.set(entry1.get())
         amount_spent.set(entry2.get())
         root.destroy()
-        return entry_code, date_of_order, time_of_order, amount_spent
+        return entry_code, amount_spent
 
     ctk.set_appearance_mode("dark")
     ctk.set_default_color_theme("blue")
@@ -19,8 +19,6 @@ def display_gui():
     root.title("Receipt Reader")
 
     entry_code = tk.StringVar()
-    date_of_order = tk.StringVar()
-    time_of_order = tk.StringVar()
     amount_spent = tk.StringVar()
 
     frame = ctk.CTkFrame(master=root)
@@ -49,4 +47,4 @@ def display_gui():
 
     root.mainloop()
 
-    return (entry_code.get()).upper(), date_of_order.get(), time_of_order.get(), amount_spent.get()
+    return (entry_code.get()).upper(), amount_spent.get()

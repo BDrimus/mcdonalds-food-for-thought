@@ -8,9 +8,9 @@ print (config.email)
 
 def main():
     start_time = time.time()
-    entry_code, date_of_order, time_of_order, amount_spent = display_gui()
+    entry_code, amount_spent = display_gui()
 
-    fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent)
+    fill_out_survey(entry_code, amount_spent)
 
     end_time = time.time()
     print(f"Time taken: {end_time - start_time} seconds")

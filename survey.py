@@ -20,7 +20,7 @@ def generate_random_name():
 
     return first_name, last_name
 
-def fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent):
+def fill_out_survey(entry_code, amount_spent):
 
     def find_elements(driver, locator, timeout=10):
         try:
@@ -79,7 +79,7 @@ def fill_out_survey(entry_code, date_of_order, time_of_order, amount_spent):
     driver = webdriver.Firefox(service=Service(executable_path=geckodriver_path))
     driver.get("https://www.mcdfoodforthoughts.com")
 
-    print(entry_code, date_of_order, time_of_order, amount_spent)
+    print(entry_code, amount_spent)
 
     button_locator = (By.ID, "NextButton")
     button = WebDriverWait(driver, 10).until(
