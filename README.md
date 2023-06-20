@@ -41,4 +41,4 @@ python main.py
 Please submit any bug reports, feature requests, or improvements as issues on the GitHub repository. You can also submit pull requests for any changes you'd like to see incorporated into the project.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
